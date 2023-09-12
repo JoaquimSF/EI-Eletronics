@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+:root {
+  --text-color: black;
+  --bg-url: url(./assets/1.png);
+  --surface-color: rgba(237, 1, 1, 0.059);
+  --border: black;
+  --surface-color-hover: rgba(213, 6, 6, 0.05);
+  --iones-hover: rgba(213, 6, 6, 0.05);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+.dark {
+  --text-color: white;
+  --bg-url: url(./assets/bg-dark.png);
+  --surface-color: rgba(9, 7, 7, 0.092);
+  --surface-color-hover: rgba(193, 188, 188, 0.183);
+  --iones-hover: rgba(193, 188, 188, 0.183);
+  --border: rgb(196, 188, 188);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#box0 {
+  width: 360px;
+  height: 712px;
+  margin: auto;
+  margin-top: 56px;
+  padding: 0px 24px;
+}
+
+#profile img {
+  width: 112px;
+  display: block;
+  margin: auto;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* BUTTON */
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: white var(--switch-bg-url) center no-repeat;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.dark #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  width: 64px;
+  height: 24px;
+  display: block;
+  background: var(--surface-color);
+  backdrop-filter: blur(4px);
+}
+
+/* Links */
+
+ul {
+  padding: 24px 0px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+/* Comando para quando se passa o mouse em cima */
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+#icones {
+  display: flex;
+  padding: 10px 0px;
+  justify-content: center;
+  font-size: 24px;
+}
+
+#icones a {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+#icones a:hover {
+  background: var(--iones-hover);
+}
