@@ -6,6 +6,7 @@
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 :root {
@@ -35,7 +36,7 @@ body * {
 
 #box0 {
   width: 100%;
-  max-width: 588px;
+  max-width: 400px;
   height: 712px;
   margin: auto;
   margin-top: 56px;
@@ -144,4 +145,14 @@ ul li a:hover {
 
 #icones a:hover {
   background: var(--iones-hover);
+}
+
+@media (max-width: 360px) {
+  :root {
+    --bg-url: url(./assets/bg-mobile-light.png);
+  }
+
+  .dark {
+    --bg-url: url(./assets/bg-mobile-dark.png);
+  }
 }
